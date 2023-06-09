@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Student Marks</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    .students-list,
+    .subjects-list {
+      display: inline-block;
+      width: 150px;
+      margin-bottom: 20px;
+    }
+
+    div {
+      white-space: pre-wrap;
+    }
+
+    button {
+      margin: 5px;
+      width: 200px;
+      height: 50px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #student-stats {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .subjects-list {
+      font-weight: bold;
+    }
+
+    #students-ul,
+    #subjects-ul,
+    #student-stats-ul {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 10px;
+    }
+
+    #students-ul li,
+    #subjects-ul li,
+    #student-stats-ul li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Students Report</h1>
+  <table id="student-table">
+    <thead>
+      <tr>
+        <th>Students/Subjects</th>
+        <th>Math</th>
+        <th>Bio</th>
+        <th>Geo</th>
+        <th>Eng</th>
+        <th>Hist</th>
+        <th>Phys</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table rows will be dynamically generated -->
+    </tbody>
+  </table>
+
+  <div class="students-list">
+    <button id="ascending-students-btn">Students List by GPA in ascending Order</button>
+    <button id="descending-students-btn">Students List by GPA in descending Order</button>
+    <button id="ascending-subjects-btn">Subject List by Average in ascending Order</button>
+    <button id="descending-subjects-btn">Subject List by Average in descending Order</button>
+    <button id="subject-stats-btn">Highest and lowest marks for each subject</button>
+    <button id="student-stats-btn">Highest and lowest marks of each student</button>
+    <button id="subject-above-average-btn"> Students who scored higher than average</button>
+    <button id="student-above-average-btn">Subjects in which students scored higher than the GPA</button>
+    <button id="subjects-class-above-average-btn">
+      In which Subject the students attained an average higher than the class average
+    </button>
+    <button id="students-class-below-average-btn">
+      Which student has attained the GPA lower than the class average
+    </button>
+  </div>
+
+  <div id="student-stats">
+    <div class="subjects-list"></div>
+    <h2>Results</h2>
+    <ul id="students-ul"></ul>
+    <ul id="subjects-ul"></ul>
+    <ul id="student-stats-ul"></ul>
+  </div>
+
+  <script src="StudentData.js"></script>
+</body>
+
+</html>
